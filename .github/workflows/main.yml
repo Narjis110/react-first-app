@@ -25,11 +25,10 @@ jobs:
         with: 
               version: 12
         
-      - name: NPM Publish
-        uses: JS-DevTools/npm-publish@v1
-       
-      - name: Creating build
-        run:  npm run build
+      - name: GitHub Action for Yarn
+        uses: Borales/actions-yarn@v2.1.0
+        with: #yarn command
+            cmd: install 
         
       - name: installing surge
         run: npm install -g surge
